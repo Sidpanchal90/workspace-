@@ -25,6 +25,12 @@ public class UserRole {
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	private User user;
 
+	/*
+	 * @JoinColumn(name = "userProfile_id")
+	 * 
+	 * @ManyToOne(fetch = FetchType.LAZY, optional = false) private UserProfileData
+	 * userProfileData;
+	 */
 	public int getId() {
 		return id;
 	}
@@ -48,5 +54,12 @@ public class UserRole {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	/*
+	 * public UserProfileData getUserProfileData() { return userProfileData; }
+	 * 
+	 * public void setUserProfileData(UserProfileData userProfileData) {
+	 * this.userProfileData = userProfileData; }
+	 */
 
 }

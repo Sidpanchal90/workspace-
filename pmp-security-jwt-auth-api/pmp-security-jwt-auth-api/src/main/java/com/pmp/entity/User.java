@@ -22,12 +22,19 @@ public class User {
 
 	@Column
 	private String userName;
-
+	private String email;
 	@Column
 	private String userPass;
-
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private Set<UserRole> userRoles = new HashSet<>();
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;
